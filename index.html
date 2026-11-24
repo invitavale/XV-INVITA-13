@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es" class="intro-lock">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Yerianny · Mis XV Años</title>
+    <meta name="description" content="Te invito a celebrar mis XV años el domingo 20 de diciembre de 2026.">
+    <meta name="theme-color" content="#A95F73">
+    <!-- Vista previa al compartir por WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yerianny · Mis XV Años">
+    <meta property="og:description" content="Domingo 20 de diciembre de 2026 · Te invito a celebrar conmigo 👑">
+    <meta property="og:image" content="vista-previa.jpg">
+    <meta property="og:locale" content="es_DO">
+    <link rel="preload" as="image" href="intro-poster.jpg">
+    <link rel="preload" as="image" href="foto0.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="royale.css?v=1">
+</head>
+<body>
+<div class="page-bg" aria-hidden="true"></div>
+
+<!-- Intro: video de la puerta. Al tocarlo arranca todo (video + música) -->
+<div id="introVideo" class="intro-video" role="button" tabindex="0" aria-label="Toca para abrir la invitación de Yerianny">
+    <video id="doorVideo" poster="intro-poster.jpg" playsinline webkit-playsinline preload="auto">
+        <source src="intro.mp4" type="video/mp4">
+        <source src="intro.webm" type="video/webm">
+    </video>
+    <div class="intro-light"></div>
+    <button class="intro-hint" type="button" tabindex="-1">
+        <span class="intro-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
+        Toca para abrir
+    </button>
+</div>
+
+<audio id="bgMusic" src="musica.mp3" loop preload="auto"></audio>
+<div id="musicPlayer" class="music-player">
+    <button id="musicToggle" class="music-button" type="button" aria-label="Pausar o reproducir la música">
+        <svg id="volumeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none"></svg>
+    </button>
+</div>
+
+<main class="invite">
+
+    <!-- 1. PORTADA -->
+    <section class="hero" data-butterflies="2" data-glitter="60">
+        <img class="hero-bg" src="foto0.jpg" alt="Yerianny en sus XV años">
+        <div class="hero-tint"></div>
+        <div class="hero-text">
+            <p class="kicker k"><span></span>Mis XV Años<span></span></p>
+            <h1 class="name">Yerianny</h1>
+            <div class="dline"><span></span><b>20 · 12 · 2026</b><span></span></div>
+            <p class="frase">Quince primaveras han florecido en mi vida,<br>y hoy quiero celebrarlas contigo.</p>
+        </div>
+    </section>
+    <div class="edge" style="background:#A95F73"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 -4 200 12 T400 12 L400 24Z" fill="#FFF9F2"/></svg></div>
+
+    <!-- 2. PASE DE INVITADO (se llena con el enlace: ?n=Familia%20Pérez&p=2) -->
+    <section class="pase light" id="pase">
+        <div class="pass reveal">
+            <img class="pass-crown anim-shine" src="icono-corona.png" alt="">
+            <div class="pass-main">
+                <p class="kicker">Pase de invitado</p>
+                <p class="fam" id="guestName">Familia Pérez</p>
+                <div class="gl"></div>
+                <p class="msg">Será un honor contar con tu presencia en mis XV años</p>
+            </div>
+            <div class="pass-stub" id="guestStub">
+                <span class="kicker">Admite</span>
+                <b id="guestSeats">2</b>
+                <span class="kicker" id="guestSeatsTxt">personas</span>
+            </div>
+        </div>
+    </section>
+    <div class="edge" style="background:#F8E1E7"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 28 200 12 T400 12 L400 24Z" fill="#D08AA0"/></svg></div>
+
+    <!-- 3. FECHA + CUENTA REGRESIVA -->
+    <section class="fecha pink" data-butterflies="3" data-glitter="90">
+        <p class="kicker reveal">Reserva la fecha</p>
+        <div class="big reveal"><span class="side">Domingo</span><span class="day">20</span><span class="side">Diciembre</span></div>
+        <p class="yr">2026</p>
+        <p class="hora">a las seis de la tarde</p>
+        <div class="cal reveal">
+            <p class="m">Diciembre</p>
+            <div class="g">
+                <span class="h">L</span><span class="h">M</span><span class="h">M</span><span class="h">J</span><span class="h">V</span><span class="h">S</span><span class="h">D</span>
+                <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+                <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span class="on">20</span>
+                <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+                <span>28</span><span>29</span><span>30</span><span>31</span>
+            </div>
+        </div>
+        <p class="faltan">Faltan</p>
+        <div class="cd reveal">
+            <div><b id="days">00</b><small>Días</small></div>
+            <div><b id="hours">00</b><small>Horas</small></div>
+            <div><b id="minutes">00</b><small>Min</small></div>
+            <div><b id="seconds">00</b><small>Seg</small></div>
+        </div>
+    </section>
+    <div class="edge" style="background:#A95F73"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 -4 200 12 T400 12 L400 24Z" fill="#FFF9F2"/></svg></div>
+
+    <!-- 4. MI FIESTA DE XV -->
+    <section class="fiesta light">
+        <p class="kicker reveal" style="color:#A95F73">La celebración</p>
+        <h2 class="title reveal">Mi Fiesta de XV</h2>
+        <div class="lugar reveal">
+            <p class="aqui"><svg width="12" height="16" viewBox="0 0 34 44"><path d="M17 0C7.6 0 0 7.4 0 16.6 0 29 17 44 17 44s17-15 17-27.4C34 7.4 26.4 0 17 0z" fill="#A95F73"/><circle cx="17" cy="16" r="7" fill="#fff"/></svg>¡Aquí será la fiesta!</p>
+            <img class="lugar-img" id="lugarImg" src="lugar-acuarela.webp" alt="Acuarela del hotel Barceló Santo Domingo">
+            <p class="vn">Barceló Santo Domingo</p>
+            <p class="va">Av. Máximo Gómez #53, esq. Av. 27 de Febrero, Santo Domingo</p>
+        </div>
+        <div class="fcard reveal">
+            <div class="fdate">
+                <div><small>Domingo</small><b>20</b><small>Diciembre</small></div>
+                <span class="vl"></span>
+                <div><small>Hora</small><b class="hr">6:00</b><small>p.m.</small></div>
+            </div>
+        </div>
+        <div class="llegar reveal"><a class="btn btn-rose" data-link="mapa" href="#" target="_blank" rel="noopener">¿Cómo llegar?</a></div>
+    </section>
+    <div class="edge" style="background:#F8E1E7"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 28 200 12 T400 12 L400 24Z" fill="#D08AA0"/></svg></div>
+
+    <!-- 5. ITINERARIO (editar horas y textos aquí) -->
+    <section class="itin pink" data-butterflies="3" data-glitter="90">
+        <p class="kicker reveal">Programa</p>
+        <h2 class="title reveal" style="margin-top:4px">Itinerario</h2>
+        <p class="sub reveal">Así viviremos juntos esta noche mágica.</p>
+        <div class="tl" id="timeline">
+            <span class="tl-fill" aria-hidden="true"></span>
+            <div class="ti reveal from-l"><div class="ic"><img class="anim-iglesia" src="iconos/iglesia.webp" alt=""></div><span class="dot"></span><div class="tx l"><b>5:00 PM</b><span>Misa de acción de gracias</span><small>Agradeciendo a Dios por mis 15 años</small></div></div>
+            <div class="ti reveal from-r"><div class="tx r"><b>7:00 PM</b><span>Mi entrada</span><small>El momento más esperado</small></div><span class="dot"></span><div class="ic"><img class="anim-tiara" src="iconos/tiara.webp" alt=""></div></div>
+            <div class="ti reveal from-l"><div class="ic"><img class="anim-nota" src="iconos/nota.webp" alt=""></div><span class="dot"></span><div class="tx l"><b>7:30 PM</b><span>Vals</span><small>Bailando con papá</small></div></div>
+            <div class="ti reveal from-r"><div class="tx r"><b>8:00 PM</b><span>Brindis</span><small>Por mis quince primaveras</small></div><span class="dot"></span><div class="ic"><img class="anim-brindis" src="iconos/brindis.webp" alt=""></div></div>
+            <div class="ti reveal from-l"><div class="ic"><img class="anim-cena" src="iconos/cena.webp" alt=""></div><span class="dot"></span><div class="tx l"><b>8:30 PM</b><span>Cena</span><small>Compartir y celebrar</small></div></div>
+            <div class="ti reveal from-r"><div class="tx r"><b>10:00 PM</b><span>¡Hora loca!</span><small>Música, baile y diversión</small></div><span class="dot"></span><div class="ic"><img class="anim-disco" src="iconos/disco.webp" alt=""></div></div>
+        </div>
+    </section>
+    <div class="edge" style="background:#A95F73"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 -4 200 12 T400 12 L400 24Z" fill="#FFF9F2"/></svg></div>
+
+    <!-- 6. GALERÍA: polaroids apiladas (desliza o usa las flechas) -->
+    <section class="gal light">
+        <p class="kicker reveal">Galería</p>
+        <h2 class="title reveal">Retratos de mis 15 años</h2>
+        <p class="sub reveal">Cada foto guarda un pedacito de esta historia que hoy florece</p>
+        <div class="stack" id="stack">
+            <figure class="pola"><span class="tape"></span><img src="foto3.jpg" alt="Foto 1 de los XV años"><figcaption class="cap">mis quince</figcaption></figure>
+            <figure class="pola"><span class="tape"></span><img src="foto4.jpg" alt="Foto 2 de los XV años"><figcaption class="cap">mi sueño</figcaption></figure>
+            <figure class="pola"><span class="tape"></span><img src="foto5.jpg" alt="Foto 3 de los XV años"><figcaption class="cap">princesa</figcaption></figure>
+            <figure class="pola"><span class="tape"></span><img src="foto1.jpg" alt="Foto 4 de los XV años" style="object-position:40% 50%"><figcaption class="cap">mi pastel</figcaption></figure>
+            <figure class="pola"><span class="tape"></span><img src="foto2.jpg" alt="Foto 5 de los XV años" style="object-position:50% 40%"><figcaption class="cap">recuerdos</figcaption></figure>
+            <figure class="pola"><span class="tape"></span><img src="foto6.jpg" alt="Foto 6 de los XV años"><figcaption class="cap">mi noche</figcaption></figure>
+            <button class="arr prev" id="prevBtn" type="button" aria-label="Foto anterior">‹</button>
+            <button class="arr next" id="nextBtn" type="button" aria-label="Foto siguiente">›</button>
+        </div>
+        <div class="dots" id="dots"></div>
+    </section>
+
+    <!-- 7. DETALLES: código de vestimenta + comparte tus fotos -->
+    <section class="det light">
+        <img class="sep" src="separador-flores.webp" alt="" style="margin-bottom:18px">
+        <p class="kicker reveal">Para tener en cuenta</p>
+        <h2 class="title reveal">Detalles</h2>
+
+        <div class="dcard reveal">
+            <div class="stx">
+                <p class="kicker">Dress code</p>
+                <h4>Código de<br>vestimenta</h4>
+                <p class="fm">Formal</p>
+                <button class="btn btn-rose" type="button" onclick="openModal('dresscodeModal')">Ver más</button>
+            </div>
+            <div class="dill"><div class="arc"><img class="anim-sway" src="vestimenta.webp" alt="Vestido y traje"></div></div>
+        </div>
+
+        <div class="dcard reveal">
+            <div class="pols">
+                <div class="po b"><img src="foto6.jpg" alt=""></div>
+                <div class="po a"><img src="foto4.jpg" alt=""></div>
+            </div>
+            <div class="stx">
+                <p class="kicker">Álbum compartido</p>
+                <h4>Comparte<br>tus fotos</h4>
+                <p>Sube los momentos que captures durante la fiesta.</p>
+                <a class="btn btn-rose" data-link="fotos" href="#" target="_blank" rel="noopener">Subir fotos</a>
+            </div>
+        </div>
+
+    </section>
+    <div class="edge" style="background:#F8E1E7"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 28 200 12 T400 12 L400 24Z" fill="#D08AA0"/></svg></div>
+
+    <!-- 8. REGALOS -->
+    <section class="gift pink" data-butterflies="2" data-glitter="60">
+        <p class="kicker reveal">Mesa de regalos</p>
+        <h2 class="title reveal" style="margin-top:4px">Regalos</h2>
+        <p class="sub reveal" style="font-size:15.5px">Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, aquí te dejo algunas opciones.</p>
+        <div class="medal reveal pop"><img class="anim-float" src="icono-regalo.png" alt="Regalo"></div>
+        <a class="btn btn-gold" data-link="regalos" href="#" target="_blank" rel="noopener">Ver sugerencias de regalo</a>
+    </section>
+    <div class="edge" style="background:#A95F73"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 -4 200 12 T400 12 L400 24Z" fill="#FFF9F2"/></svg></div>
+
+    <!-- 9. CONFIRMA TU ASISTENCIA -->
+    <section class="rsvp light">
+        <p class="kicker reveal">R.S.V.P.</p>
+        <h2 class="title reveal">Confirma tu<br>asistencia</h2>
+        <p class="sub reveal">Me encantaría contar contigo en esta noche tan especial.</p>
+        <div class="env reveal"><div class="b"></div><div class="c">¡Ahí estaré!</div><div class="f"></div><div class="s">Y</div></div>
+        <p class="limit">Antes del 1 de diciembre</p>
+        <a class="btn btn-rose" data-link="confirmar" href="#" target="_blank" rel="noopener">Confirmar asistencia</a>
+    </section>
+    <div class="edge" style="background:#F8E1E7"><svg viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M0 24 L0 12 Q100 28 200 12 T400 12 L400 24Z" fill="#D08AA0"/></svg></div>
+
+    <!-- 10. PIE -->
+    <footer class="foot pink" data-butterflies="2" data-glitter="45">
+        <img class="crown reveal pop anim-shine" src="icono-corona.png" alt="">
+        <p class="verse reveal">«Gracias por ser parte<br>de mis quince primaveras.»</p>
+        <p class="con">Con cariño,</p>
+        <p class="nm reveal">Yerianny</p>
+        <div class="gl" style="width:180px;margin:8px auto 0"></div>
+        <p class="kicker" style="margin-top:12px">20 · Diciembre · 2026</p>
+        <a class="credit" href="https://invitavale.com" target="_blank" rel="noopener">invitavale.com</a>
+    </footer>
+</main>
+
+<!-- Modal: código de vestimenta -->
+<div id="dresscodeModal" class="modal-overlay" onclick="closeModal(event,'dresscodeModal')">
+    <div class="modal-card" onclick="event.stopPropagation()">
+        <button class="modal-close" type="button" onclick="closeModal(null,'dresscodeModal')" aria-label="Cerrar">&times;</button>
+        <h3>Código de vestimenta</h3>
+        <p class="fm">Formal</p>
+        <img src="vestimenta.webp" alt="Vestido largo y traje">
+        <p>Con cariño, te pido evitar estos colores:</p>
+        <div class="mcols">
+            <div><i style="background:#fff"></i>Blanco</div>
+            <div><i style="background:#F2C94C"></i>Amarillo</div>
+            <div><i style="background:#D64541"></i>Rojo</div>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="royale.js?v=1" defer></script>
+</body>
+</html>
